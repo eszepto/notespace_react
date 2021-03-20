@@ -1,13 +1,17 @@
 import logo from './logo.svg';
+import Navbar from './common/Navbar'
+
 import ReactDOM from 'react-dom'
 import './App.css';
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends React.Component {
+  
   render() {
     return (
       <div className="App">
+        <Navbar></Navbar>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -22,10 +26,23 @@ class App extends React.Component {
             Learn React
           </a>
         </header>
-        <Route path="/"  />
-        <Route path="/upload" />
-        <Route path="/login" />
-        <Route path="/register"/>
+        <Switch>
+          <Route path="/">
+            
+          </Route>
+          <Route path="/note/:id">
+
+          </Route>
+          <Route path="/upload">
+
+          </Route>
+          <Route path="/login">
+
+          </Route>
+          <Route path="/register">
+          
+          </Route>
+        </Switch>
       </div>
     )
   }
