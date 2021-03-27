@@ -1,20 +1,19 @@
 import logo from './logo.svg';
-import Navb from './common/Navbar'
+import Navb from './component/Navbar/Navbar'
 
 import ReactDOM from 'react-dom'
-import './App.css';
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-class App extends React.Component {
+import './App.css';
+
+const App = () => {
   
-  render() {
     return (
       <div className="App">
         <Navb></Navb>
-        <header className="App-header">
-  
-        </header>
+        <header className="App-header"></header>
+
         <Switch>
           <Route path="/">
             
@@ -34,6 +33,6 @@ class App extends React.Component {
         </Switch>
       </div>
     )
-  }
+  
 }
 export default App
